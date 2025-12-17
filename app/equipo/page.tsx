@@ -1,5 +1,5 @@
 import { EquipoComponent } from "@/components/quienesSomos/quienesSomos";
-
+export const runtime = 'edge';
 
 export default function EquipoPage() {
     return (
