@@ -1,30 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const { withCloudflareAdapter } = require('@opennext/adapter-cloudflare');
+
+const nextConfig = withCloudflareAdapter({
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Configuración de imágenes externas
+  experimental: { appDir: true },
   images: {
     unoptimized: true,
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "allnovu.com",
-        pathname: "/gestion/images/Productos/**",
-      },
-      {
-        protocol: "https",
-        hostname: "allnovu.com",
-        pathname: "/**", // Permite otras imágenes en tu dominio
-      },
+      { protocol: "https", hostname: "allnovu.com", pathname: "/gestion/images/Productos/**" },
+      { protocol: "https", hostname: "allnovu.com", pathname: "/**" },
     ],
     localPatterns: [
-      {
-        pathname: '/**', // Todas las rutas en /public
-        search: '',      // Sin parámetros de búsqueda
-      },
+      { pathname: '/**', search: '' },
     ],
   }
-};
+});
 
 module.exports = nextConfig;
