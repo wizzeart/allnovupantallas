@@ -3,7 +3,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: { appDir: true },
+  // ELIMINADO: experimental: { appDir: true } 
+  // En Next.js 16, appDir ya es el estándar y ponerlo aquí causa error.
+
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -14,7 +16,9 @@ const nextConfig = {
       { pathname: '/**', search: '' },
     ],
   },
-  output: "export", // Esto genera archivos estáticos listos para Cloudflare Pages
+  // ELIMINADO: output: "export"
+  // @cloudflare/next-on-pages necesita el output estándar para convertir las
+  // Server Actions en un Worker. Si pones 'export', desactivas la parte de servidor.
 };
 
 module.exports = nextConfig;
