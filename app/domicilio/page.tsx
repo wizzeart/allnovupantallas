@@ -1,5 +1,5 @@
 import { DomicilioComponent } from "@/components/domicilio/domicilioComponent";
-
+export const runtime = 'edge';
 
 export default function DomicilioPage() {
     return (
