@@ -1,4 +1,5 @@
 import { Category } from "@/components/Footer/footer";
+export const runtime = 'edge';
 import { FloatingNabvar } from "@/components/navbar/floatingNavbar";
 import ProductsComponent from "@/components/products/productsComponent";
 import { Hero } from "@/components/ui/hero";
