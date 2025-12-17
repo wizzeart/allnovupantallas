@@ -3,7 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: { appDir: true },
+  
   images: {
     unoptimized: true,
     remotePatterns: [
