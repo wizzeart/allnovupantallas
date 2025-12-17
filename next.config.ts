@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { withCloudflareAdapter } = require('@opennext/adapter-cloudflare');
-
-const nextConfig = withCloudflareAdapter({
+const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -15,7 +13,8 @@ const nextConfig = withCloudflareAdapter({
     localPatterns: [
       { pathname: '/**', search: '' },
     ],
-  }
-});
+  },
+  output: "export", // Esto genera archivos estáticos listos para Cloudflare Pages
+};
 
 module.exports = nextConfig;
