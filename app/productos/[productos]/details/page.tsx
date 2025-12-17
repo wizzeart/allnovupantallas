@@ -1,6 +1,6 @@
 import DetailsComponent, { Products, Products2 } from "@/components/details/details";
 import { detailsProduct, getProducts } from "@/lib/actions/products";
-
+export const runtime = 'edge';
 export default async function ProductosDetailsPage({ params }: { params: Promise<{ productos: string }> }) {
 
     const { productos } = await params;
