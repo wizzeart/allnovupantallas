@@ -5,7 +5,7 @@ import MainLayout from "@/components/layount/mainLayout";
 import { CartProvider } from "@/components/cart/cart-provider";
 import { Toaster } from "sonner";
 import FullScreenApp from "@/components/navbar/fullSize/full-size";
-
+export const runtime = 'edge';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
